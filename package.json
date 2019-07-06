@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "mockjs": "^1.0.1-beta3",
     "vue": "^2.6.10",
+    "vue-awesome": "^3.5.4",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1"
   },

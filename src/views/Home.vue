@@ -1,18 +1,32 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+     <h2>商品列表</h2>  
+    <indexs class="main"></indexs>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import indexs from '@/views/home/index.vue'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    indexs
   }
 }
 </script>
+<style lang="scss" scoped>
+.home{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  h2{
+    padding-bottom: 20px;
+  }
+  .main{
+    flex: 1;
+    overflow: auto;
+  }
+}
+</style>

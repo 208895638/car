@@ -1,14 +1,29 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div id="app" class="main">
+    <div class="box">
+      <router-view/>
     </div>
-    <router-view/>
+    
+    <div class="footer" v-if="$route.meta.footerShow">
+      <ul>
+        <router-link to="/" tag="li" exact>首页</router-link>
+        <router-link to="/car" tag="li" exact>购物车</router-link>
+        <router-link to="/user" tag="li" exact>个人信息</router-link>
+      </ul>
+    </div>
   </div>
 </template>
 
 <style lang="scss">
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body,html{
+  width: 100%;
+  height: 100%;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -23,6 +38,31 @@
     color: #2c3e50;
     &.router-link-exact-active {
       color: #42b983;
+    }
+  }
+}
+</style>
+<style lang="scss" scoped>
+.r-active{
+  color: red;
+}
+.main{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .box{
+    flex: 1;
+    overflow: auto;
+  }
+}
+.footer{
+  ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid #ccc;
+    li{
+      padding:20px 0;
     }
   }
 }
