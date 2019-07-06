@@ -1,4 +1,4 @@
-# car
+# car  目前完成购物车 还差登陆注册
 
 ## Project setup
 ```
